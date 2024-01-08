@@ -10,8 +10,8 @@ public class CityChangePage {
     public static SelenideElement searchLine = $x("//input[@class='ymaps-2-1-79-searchbox-input__input']");
     public static SelenideElement pickAddress = $x("//span[@class='address-item__name-text'][1]");
     public static SelenideElement searchButton = $x("//ymaps[@class='ymaps-2-1-79-searchbox-button-text']");
-    public static SelenideElement addressConfirm =$x("//span[@class='details-self__name-text']");
     public static SelenideElement pick = $x("//button[@data-link='{on ~root.settings.onPooSelect #data}disabled{:~root.settings.currentAddressId == id}']");
+    public static SelenideElement pickPointInfo = $x("//h3[@class='details-self__title']");
 
     public CityChangePage changeCity(String value) {
 
@@ -28,6 +28,9 @@ public class CityChangePage {
         WbSteps.click(pick);
 
         return this;
+    }
+    public String getAddress() {
+        return CityChangePage.pickAddress.text();
     }
 }
 

@@ -1,7 +1,8 @@
 
 package example.steps;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import example.pages.CityChangePage;
+
 import static com.codeborne.selenide.Condition.*;
 
 
@@ -9,7 +10,7 @@ public class WbSteps {
 
     public static void click(SelenideElement element) {
 
-        element.shouldBe(enabled,interactable).click();
+        element.shouldBe(visible,enabled,interactable).click();
     }
     public static void sendKeys(SelenideElement element, String text) {
 
@@ -17,14 +18,11 @@ public class WbSteps {
     }
     public static void hover(SelenideElement element) {
 
-        element.shouldBe(visible).hover();
+        element.shouldBe(visible,enabled).hover();
     }
     public static void clear(SelenideElement element) {
 
         element.clear();
     }
-    public void openURL(String url) {
-        Selenide.open(url);
-        Selenide.sleep(300);
-    }
+
 }

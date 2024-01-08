@@ -8,6 +8,6 @@ public class OpenBrowser {
     @Given("Пользователь открывает страницу {string}")
     public void openURL(String url) {
         Selenide.open(url);
-        Selenide.sleep(300);}
+        Selenide.sleep(1400);}
 
 }
