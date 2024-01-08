@@ -1,7 +1,7 @@
 @changeCity
-Feature: fff
+Feature: Смена города
 
-  Scenario: fffff
+  Scenario: Изменение адреса пункта выдачи
 
     Given Пользователь открывает страницу "https://www.wildberries.ru/"
     When Пользователь нажимает на кнопку “Смена города”
